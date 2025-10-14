@@ -264,6 +264,22 @@ For production, ensure any API keys or configuration are set as environment vari
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
+## 🛠️ Troubleshooting
+
+### Dev Server Cache Issues (504 Error)
+
+If you encounter "504 Outdated Optimize Dep" errors when running the dev server:
+
+```bash
+# Clear Vite cache
+rm -rf node_modules/.vite
+
+# Restart dev server
+npm run dev
+```
+
+The vite.config.js has been configured with `force: true` to prevent this issue, but occasionally you may need to manually clear the cache.
+
 ## 📄 License
 
 Copyright © 2024 Skylark Textiles. All rights reserved.

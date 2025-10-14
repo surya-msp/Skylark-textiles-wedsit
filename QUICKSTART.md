@@ -179,6 +179,15 @@ This creates a `dist/` folder with optimized files.
 
 ## ⚠️ Common Issues
 
+### 504 Error / Outdated Optimize Dep
+If you see "504 Outdated Optimize Dep" errors in the dev server:
+```bash
+# Clear Vite cache
+rm -rf node_modules/.vite
+npm run dev
+```
+This is a Vite dependency optimization cache issue. The project is configured to prevent this, but occasionally manual clearing is needed.
+
 ### Images not loading
 - Ensure images are in `public/assets/`
 - Use `/assets/filename.jpg` (leading slash important)
