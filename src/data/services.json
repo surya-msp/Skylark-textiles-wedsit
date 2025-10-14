@@ -1,0 +1,129 @@
+[
+  {
+    "id": 1,
+    "title": "Spinning",
+    "description": "State-of-the-art spinning facilities producing premium quality yarns for diverse applications. Our advanced machinery and skilled technicians ensure consistent quality and precision.",
+    "icon": "precision_manufacturing",
+    "capabilities": [
+      "Ring spinning for high-quality yarns",
+      "Open-end spinning for cost-effective production",
+      "Compact spinning for superior yarn strength"
+    ],
+    "machinery": [
+      "Rieter Ring Spinning Frames",
+      "Schlafhorst Autoconer Winding Machines",
+      "Uster Quantum Clearing Systems"
+    ],
+    "capacity": "50 tons per day",
+    "turnaround": "7-10 days",
+    "moq": "500 kg per order"
+  },
+  {
+    "id": 2,
+    "title": "Weaving",
+    "description": "Advanced weaving capabilities producing a wide range of fabrics from basic constructions to complex jacquard patterns. Our looms are equipped with modern technology for precision and efficiency.",
+    "icon": "web",
+    "capabilities": [
+      "Plain, twill, and satin weave structures",
+      "Jacquard weaving for intricate patterns",
+      "Dobby weaving for textured fabrics"
+    ],
+    "machinery": [
+      "Picanol Rapier Looms",
+      "Toyota Air Jet Looms",
+      "Staubli Jacquard Systems"
+    ],
+    "capacity": "100,000 meters per day",
+    "turnaround": "10-14 days",
+    "moq": "1,000 meters per design"
+  },
+  {
+    "id": 3,
+    "title": "Knitting",
+    "description": "Comprehensive knitting services offering circular and flat knitting capabilities. From basic jersey to complex intarsia patterns, we deliver versatile knit solutions.",
+    "icon": "loop",
+    "capabilities": [
+      "Circular knitting for tubular fabrics",
+      "Flat knitting for shaped garment pieces",
+      "Seamless knitting technology"
+    ],
+    "machinery": [
+      "Mayer & Cie Circular Knitting Machines",
+      "Shima Seiki Flat Knitting Machines",
+      "Santoni Seamless Knitting Technology"
+    ],
+    "capacity": "20 tons per day",
+    "turnaround": "5-8 days",
+    "moq": "300 kg per design"
+  },
+  {
+    "id": 4,
+    "title": "Dyeing & Printing",
+    "description": "Cutting-edge dyeing and printing facilities capable of achieving consistent color matching and vibrant prints. Our processes meet international environmental standards.",
+    "icon": "palette",
+    "capabilities": [
+      "Yarn dyeing for consistent coloration",
+      "Piece dyeing for finished fabrics",
+      "Digital printing for complex designs",
+      "Screen printing for large-scale patterns"
+    ],
+    "machinery": [
+      "Thies Jet Dyeing Machines",
+      "MS Printing Digital Printers",
+      "Reggiani Rotary Screen Printers",
+      "Datacolor Spectrophotometers"
+    ],
+    "capacity": "30 tons per day (dyeing), 50,000 meters per day (printing)",
+    "turnaround": "7-12 days",
+    "moq": "500 kg per color (dyeing), 500 meters per design (printing)"
+  },
+  {
+    "id": 5,
+    "title": "Finishing",
+    "description": "Comprehensive finishing treatments to enhance fabric properties and appearance. From basic mechanical finishing to advanced chemical treatments, we provide complete solutions.",
+    "icon": "auto_awesome",
+    "capabilities": [
+      "Sanforizing for dimensional stability",
+      "Mercerization for luster and strength",
+      "Water-repellent and stain-resistant finishes",
+      "Anti-microbial treatments",
+      "Softening and hand feel enhancement"
+    ],
+    "machinery": [
+      "Santex Stenters",
+      "Brückner Finishing Lines",
+      "Monforts Sanforizing Machines",
+      "Benninger Mercerizing Range"
+    ],
+    "capacity": "80,000 meters per day",
+    "turnaround": "3-5 days",
+    "moq": "500 meters per treatment"
+  },
+  {
+    "id": 6,
+    "title": "Quality Assurance",
+    "description": "Rigorous quality control at every stage of production. Our state-of-the-art testing laboratory ensures all products meet international standards and client specifications.",
+    "icon": "verified",
+    "capabilities": [
+      "Raw material inspection and testing",
+      "In-process quality checks",
+      "Final product inspection",
+      "Color fastness testing",
+      "Physical and dimensional testing",
+      "Fabric defect analysis"
+    ],
+    "certifications": [
+      "ISO 9001:2015",
+      "ISO 14001:2015",
+      "OEKO-TEX Standard 100",
+      "GOTS (Global Organic Textile Standard)",
+      "BCI (Better Cotton Initiative)"
+    ],
+    "testingEquipment": [
+      "SDL Atlas Testing Equipment",
+      "James Heal Fabric Testing Instruments",
+      "X-Rite Color Measurement Systems",
+      "Uster Fabric Inspection Systems"
+    ]
+  }
+]
