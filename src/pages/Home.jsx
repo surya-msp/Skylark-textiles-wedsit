@@ -45,12 +45,12 @@ const highlights = [
 ];
 
 const galleryImages = [
-  { src: '/assets/loom-hero.jpg', alt: 'Modern textile weaving looms in production' },
-  { src: '/assets/dyeing-line.jpg', alt: 'Industrial fabric dyeing and finishing line' },
-  { src: '/assets/quality-control.jpg', alt: 'Quality control inspection of finished fabrics' },
-  { src: '/assets/spinning-facility.jpg', alt: 'High-capacity yarn spinning facility' },
-  { src: '/assets/fabric-samples.jpg', alt: 'Premium textile fabric samples and swatches' },
-  { src: '/assets/sustainable-production.jpg', alt: 'Eco-friendly sustainable textile production' },
+  { src: 'https://images.pexels.com/photos/7679456/pexels-photo-7679456.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Modern textile weaving looms in production' },
+  { src: 'https://images.pexels.com/photos/8892061/pexels-photo-8892061.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Industrial fabric dyeing and finishing line' },
+  { src: 'https://images.pexels.com/photos/7679489/pexels-photo-7679489.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Quality control inspection of finished fabrics' },
+  { src: 'https://images.pexels.com/photos/6567614/pexels-photo-6567614.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'High-capacity yarn spinning facility' },
+  { src: 'https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Premium textile fabric samples and swatches' },
+  { src: 'https://images.pexels.com/photos/6567539/pexels-photo-6567539.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Eco-friendly sustainable textile production' },
 ];
 
 function Home() {
@@ -83,7 +83,20 @@ function Home() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: 'linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.8))',
+            backgroundImage: 'url(https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            zIndex: 0,
+          },
+          '&::after': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(26, 26, 46, 0.75)',
             zIndex: 1,
           },
         }}
