@@ -45,15 +45,15 @@ const highlights = [
 ];
 
 const galleryImages = [
-  { src: 'https://images.pexels.com/photos/7679456/pexels-photo-7679456.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Modern textile weaving looms in production' },
-  { src: 'https://images.pexels.com/photos/8892061/pexels-photo-8892061.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Industrial fabric dyeing and finishing line' },
-  { src: 'https://images.pexels.com/photos/7679489/pexels-photo-7679489.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Quality control inspection of finished fabrics' },
-  { src: 'https://images.pexels.com/photos/6567614/pexels-photo-6567614.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'High-capacity yarn spinning facility' },
-  { src: 'https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Premium textile fabric samples and swatches' },
-  { src: 'https://images.pexels.com/photos/6567539/pexels-photo-6567539.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Eco-friendly sustainable textile production' },
-  { src: 'https://images.pexels.com/photos/6567613/pexels-photo-6567613.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Textile factory production floor' },
-  { src: 'https://images.pexels.com/photos/3738383/pexels-photo-3738383.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Organized thread spools for manufacturing' },
-  { src: 'https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Stack of premium denim fabrics' },
+  { src: 'https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Colorful textile fabric rolls display' },
+  { src: 'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Vibrant fabric store with colorful textiles' },
+  { src: 'https://images.pexels.com/photos/6567614/pexels-photo-6567614.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Colorful yarn and thread collection' },
+  { src: 'https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Beautiful textile pattern samples' },
+  { src: 'https://images.pexels.com/photos/1143754/pexels-photo-1143754.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Colorful fabric textile display' },
+  { src: 'https://images.pexels.com/photos/5705471/pexels-photo-5705471.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Elegant fabric rolls in textile shop' },
+  { src: 'https://images.pexels.com/photos/3738383/pexels-photo-3738383.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Organized colorful thread spools' },
+  { src: 'https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Vibrant textile shopping experience' },
+  { src: 'https://images.pexels.com/photos/3738388/pexels-photo-3738388.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Colorful textile material display' },
 ];
 
 function Home() {
