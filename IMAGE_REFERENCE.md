@@ -131,19 +131,19 @@ const galleryImages = [
 // Blog Post 1
 {
   "title": "The Future of Sustainable Textiles: Innovations and Challenges",
-  "image": "https://images.pexels.com/photos/6567613/pexels-photo-6567613.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    "image": "https://t3.ftcdn.net/jpg/04/73/56/88/240_F_473568811_0R70C66lG6dpwxOrcxJrTRYeIOTnuSUK.jpg",
 }
 
 // Blog Post 2
 {
   "title": "The Importance of Quality Control in Textile Manufacturing",
-  "image": "https://images.pexels.com/photos/7679489/pexels-photo-7679489.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    "image": "https://static.vecteezy.com/system/resources/previews/049/099/215/non_2x/brightly-colored-fabrics-stacked-neatly-create-a-mesmerizing-visual-feast-photo.jpeg",
 }
 
 // Blog Post 3
 {
   "title": "How to Choose the Right Textile Supplier for Your Business",
-  "image": "https://images.pexels.com/photos/3738383/pexels-photo-3738383.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    "image": "https://static.vecteezy.com/system/resources/previews/049/099/215/non_2x/brightly-colored-fabrics-stacked-neatly-create-a-mesmerizing-visual-feast-photo.jpeg",
 }
 
 // Blog Post 4

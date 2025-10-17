@@ -45,15 +45,15 @@ const highlights = [
 ];
 
 const galleryImages = [
-  { src: 'https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Colorful textile fabric rolls display' },
-  { src: 'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Vibrant fabric store with colorful textiles' },
-  { src: 'https://images.pexels.com/photos/6567614/pexels-photo-6567614.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Colorful yarn and thread collection' },
-  { src: 'https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Beautiful textile pattern samples' },
-  { src: 'https://images.pexels.com/photos/1143754/pexels-photo-1143754.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Colorful fabric textile display' },
-  { src: 'https://images.pexels.com/photos/5705471/pexels-photo-5705471.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Elegant fabric rolls in textile shop' },
-  { src: 'https://images.pexels.com/photos/3738383/pexels-photo-3738383.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Organized colorful thread spools' },
-  { src: 'https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Vibrant textile shopping experience' },
-  { src: 'https://images.pexels.com/photos/3738388/pexels-photo-3738388.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Colorful textile material display' },
+  { src: 'https://t4.ftcdn.net/jpg/01/46/19/97/240_F_146199738_N8GwsSTWjwdfMlVunBegsTNlBZZG9gHN.jpg' },
+  { src: 'https://t4.ftcdn.net/jpg/02/46/66/91/240_F_246669196_rfPrv48UdfAJcizItX1N7gnUewRmASur.jpg', alt: 'Vibrant fabric store with colorful textiles' },
+  { src: 'https://t3.ftcdn.net/jpg/04/61/24/00/240_F_461240064_Np69E4wo81UmPoM4BcgUiYsIo8fddN1d.jpg', alt: 'Colorful yarn and thread collection' },
+  { src: 'https://t3.ftcdn.net/jpg/02/14/30/12/240_F_214301281_IABBckv4fOl4igc0rlOaJcvCnHCCAcsI.jpg', alt: 'Beautiful textile pattern samples' },
+  { src: 'https://t3.ftcdn.net/jpg/03/35/88/46/240_F_335884635_0Piz4KrVbFdCQ9YMep899taNSPZe2HKt.jpg', alt: 'Colorful fabric textile display' },
+  { src: 'https://t3.ftcdn.net/jpg/03/34/79/68/360_F_334796865_VVTjg49nbLgQPG6rgKDjVqSb5XUhBVsW.jpg', alt: 'Elegant fabric rolls in textile shop' },
+  { src: 'https://t4.ftcdn.net/jpg/05/03/42/07/240_F_503420710_1ECwHx9ZXTNUm7ajqf3pMJ7Taxf6Twh1.jpg', alt: 'Organized colorful thread spools' },
+  { src: 'https://t4.ftcdn.net/jpg/02/74/65/53/240_F_274655374_WWPOy7i7C2cP8at33jFZxHBiN0G6MHbi.jpg', alt: 'Vibrant textile shopping experience' },
+  { src: 'https://t3.ftcdn.net/jpg/06/00/53/14/240_F_600531470_pCi3Ye8NyzrPtG7w2ax66IYLjzno4TGV.jpg', alt: 'Colorful textile material display' },
 ];
 
 function Home() {
