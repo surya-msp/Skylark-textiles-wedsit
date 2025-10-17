@@ -51,6 +51,9 @@ const galleryImages = [
   { src: 'https://images.pexels.com/photos/6567614/pexels-photo-6567614.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'High-capacity yarn spinning facility' },
   { src: 'https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Premium textile fabric samples and swatches' },
   { src: 'https://images.pexels.com/photos/6567539/pexels-photo-6567539.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Eco-friendly sustainable textile production' },
+  { src: 'https://images.pexels.com/photos/6567613/pexels-photo-6567613.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Textile factory production floor' },
+  { src: 'https://images.pexels.com/photos/3738383/pexels-photo-3738383.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Organized thread spools for manufacturing' },
+  { src: 'https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Stack of premium denim fabrics' },
 ];
 
 function Home() {
@@ -201,7 +204,7 @@ function Home() {
             >
               <Box
                 component="img"
-                src="/assets/about-hero.jpg"
+                src="https://images.pexels.com/photos/3738382/pexels-photo-3738382.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Skylark Textiles manufacturing facility"
                 sx={{
                   position: 'absolute',
