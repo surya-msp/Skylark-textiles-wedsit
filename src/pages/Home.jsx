@@ -20,6 +20,7 @@ import HighlightCard from '../components/HighlightCard';
 import Gallery from '../components/Gallery';
 import newsData from '../data/news.json';
 import blogData from '../data/blog.json';
+import logo from '../assets/logo.png'
 
 const highlights = [
   {
@@ -74,7 +75,7 @@ function Home() {
       <Box
         sx={{
           position: 'relative',
-          minHeight: { xs: '80vh', md: '90vh' },
+          minHeight: { xs: '80vh', md: '140vh' },
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
@@ -86,7 +87,8 @@ function Home() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: 'url(https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+            backgroundImage:
+              'url(https://t3.ftcdn.net/jpg/02/14/30/12/240_F_214301281_IABBckv4fOl4igc0rlOaJcvCnHCCAcsI.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -99,73 +101,31 @@ function Home() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(26, 26, 46, 0.75)',
             zIndex: 1,
           },
         }}
       >
-        <Container
+        {/* Logo fixed at top-start */}
+        <Box
           sx={{
-            position: 'relative',
-            zIndex: 2,
-            py: { xs: 8, md: 12 },
+            position: 'absolute',
+            top: 20,
+            left: 20,
+            zIndex: 3,
           }}
         >
-          <Box sx={{ maxWidth: 800 }}>
-            <Typography
-              variant="h1"
-              sx={{
-                color: 'primary.contrastText',
-                mb: 3,
-                fontSize: { xs: '2.5rem', md: '4rem' },
-              }}
-            >
-              Crafting Excellence in Every Thread
-            </Typography>
-            <Typography
-              variant="h5"
-              sx={{
-                color: 'rgba(255, 255, 255, 0.9)',
-                mb: 5,
-                fontWeight: 300,
-                lineHeight: 1.6,
-              }}
-            >
-              Premium textile manufacturing with uncompromising quality, sustainable practices, and
-              innovative solutions for global markets.
-            </Typography>
-            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-              <Button
-                component={Link}
-                to="/services"
-                variant="contained"
-                color="secondary"
-                size="large"
-                endIcon={<ArrowForwardIcon />}
-              >
-                Explore Services
-              </Button>
-              <Button
-                component={Link}
-                to="/booking"
-                variant="outlined"
-                size="large"
-                sx={{
-                  borderColor: 'primary.contrastText',
-                  color: 'primary.contrastText',
-                  '&:hover': {
-                    borderColor: 'secondary.main',
-                    backgroundColor: 'secondary.main',
-                    color: 'primary.main',
-                  },
-                }}
-              >
-                Book a Visit
-              </Button>
-            </Box>
-          </Box>
-        </Container>
+          <img
+            src={logo}
+            alt="Logo"
+            style={{
+              width: '180px',
+              height: 'auto',
+              objectFit: 'contain',
+            }}
+          />
+        </Box>
       </Box>
+
 
       <Section py={10}>
         <Grid container spacing={4}>

@@ -111,7 +111,7 @@ function Header() {
                   {item.label}
                 </Button>
               ))}
-              <Button
+              {/* <Button
                 component={Link}
                 to="/booking"
                 variant="contained"
@@ -122,7 +122,7 @@ function Header() {
                 }}
               >
                 Book a Visit
-              </Button>
+              </Button> */}
             </Box>
 
             <IconButton
@@ -180,7 +180,7 @@ function Header() {
                 </ListItemButton>
               </ListItem>
             ))}
-            <ListItem disablePadding>
+            {/* <ListItem disablePadding>
               <ListItemButton
                 component={Link}
                 to="/booking"
@@ -196,7 +196,7 @@ function Header() {
                   Book a Visit
                 </Button>
               </ListItemButton>
-            </ListItem>
+            </ListItem> */}
           </List>
         </Box>
       </Drawer>
