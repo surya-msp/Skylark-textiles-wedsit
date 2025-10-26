@@ -15,11 +15,11 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const quickLinks = [
+  { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'News', path: '/news' },
-  { label: 'Blog', path: '/blog' },
-  { label: 'Events', path: '/events' },
+  { label: 'Infrastructure', path: '/services' },
+  { label: 'Certificate & Sustainability', path: '/events' },
+  { label: 'ESG', path: '/blog' },
   { label: 'Contact', path: '/contact' },
 ];
 
@@ -36,27 +36,26 @@ function Footer() {
       sx={{
         backgroundColor: 'primary.main',
         color: 'primary.contrastText',
-        pt: 8,
-        pb: 4,
+        pt: 4,
+        pb: 3,
         mt: 'auto',
       }}
     >
       <Container>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={5}>
             <Typography
-              variant="h4"
+              variant="h5"
               sx={{
                 fontFamily: '"Cormorant Garamond", serif',
                 fontWeight: 700,
-                mb: 2,
+                mb: 1.5,
                 letterSpacing: '0.05em',
               }}
             >
               SKYLARK TEXTILES
             </Typography>
-            <Typography variant="body2" sx={{ mb: 3, lineHeight: 1.8, opacity: 0.9 }}>
-              {/* TODO: Replace with actual company summary from PDF */}
+            <Typography variant="body2" sx={{ mb: 2, lineHeight: 1.7, opacity: 0.9 }}>
               A leading textile manufacturer committed to excellence in quality,
               innovation, and sustainable practices. Serving global markets with
               premium yarns, fabrics, and textile solutions.
@@ -84,18 +83,19 @@ function Footer() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={2}>
+          <Grid item xs={12} sm={6} md={3}>
             <Typography
               variant="h6"
               sx={{
-                mb: 2,
+                mb: 1.5,
                 fontWeight: 600,
+                fontSize: '1rem',
                 letterSpacing: '0.05em',
               }}
             >
               Quick Links
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               {quickLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -104,7 +104,7 @@ function Footer() {
                     textDecoration: 'none',
                     color: 'inherit',
                     opacity: 0.9,
-                    fontSize: '0.9375rem',
+                    fontSize: '0.875rem',
                     transition: 'all 0.3s ease',
                   }}
                   onMouseEnter={(e) => {
@@ -122,22 +122,22 @@ function Footer() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={6} md={4}>
             <Typography
               variant="h6"
               sx={{
-                mb: 2,
+                mb: 1.5,
                 fontWeight: 600,
+                fontSize: '1rem',
                 letterSpacing: '0.05em',
               }}
             >
               Contact
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
               <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'flex-start' }}>
-                <LocationOnIcon sx={{ fontSize: 20, mt: 0.3, opacity: 0.8 }} />
-                <Typography variant="body2" sx={{ opacity: 0.9, lineHeight: 1.6 }}>
-                  {/* TODO: Replace with actual address from PDF */}
+                <LocationOnIcon sx={{ fontSize: 18, mt: 0.3, opacity: 0.8 }} />
+                <Typography variant="body2" sx={{ opacity: 0.9, lineHeight: 1.5, fontSize: '0.875rem' }}>
                   2/206, Tiruppur Main Road, <br />
                   Gudimangalam, Udumalpet,<br />
                   Thiruppur District - 642 201.,<br />
@@ -145,65 +145,23 @@ function Footer() {
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
-                <PhoneIcon sx={{ fontSize: 20, opacity: 0.8 }} />
-                <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  {/* TODO: Replace with actual phone from PDF */}
+                <PhoneIcon sx={{ fontSize: 18, opacity: 0.8 }} />
+                <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.875rem' }}>
                   +91 94420 09317<br/>
                   +91 99438 49317
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
-                <EmailIcon sx={{ fontSize: 20, opacity: 0.8 }} />
-                <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  {/* TODO: Replace with actual email from PDF */}
+                <EmailIcon sx={{ fontSize: 18, opacity: 0.8 }} />
+                <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.875rem' }}>
                   info@skylarktextiles.com
-                </Typography>
-              </Box>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} md={3}>
-            <Typography
-              variant="h6"
-              sx={{
-                mb: 2,
-                fontWeight: 600,
-                letterSpacing: '0.05em',
-              }}
-            >
-              Business Hours
-            </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  Monday - Friday
-                </Typography>
-                <Typography variant="body2" sx={{ opacity: 0.9, fontWeight: 500 }}>
-                  {/* TODO: Replace with actual hours from PDF */}
-                  9:00 - 18:00
-                </Typography>
-              </Box>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  Saturday
-                </Typography>
-                <Typography variant="body2" sx={{ opacity: 0.9, fontWeight: 500 }}>
-                  9:00 - 14:00
-                </Typography>
-              </Box>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  Sunday
-                </Typography>
-                <Typography variant="body2" sx={{ opacity: 0.9, fontWeight: 500 }}>
-                  Closed
                 </Typography>
               </Box>
             </Box>
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 4, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
+        <Divider sx={{ my: 2.5, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
 
         <Box
           sx={{

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import {
   Box,
   Container,
@@ -45,6 +46,14 @@ const highlights = [
   },
 ];
 
+const heroImages = [
+  'https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=3840',
+  'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=3840',
+  'https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=3840',
+  'https://images.pexels.com/photos/1143754/pexels-photo-1143754.jpeg?auto=compress&cs=tinysrgb&w=3840',
+  'https://images.pexels.com/photos/5705471/pexels-photo-5705471.jpeg?auto=compress&cs=tinysrgb&w=3840',
+];
+
 const galleryImages = [
   { src: 'https://t4.ftcdn.net/jpg/01/46/19/97/240_F_146199738_N8GwsSTWjwdfMlVunBegsTNlBZZG9gHN.jpg' },
   { src: 'https://t4.ftcdn.net/jpg/02/46/66/91/240_F_246669196_rfPrv48UdfAJcizItX1N7gnUewRmASur.jpg', alt: 'Vibrant fabric store with colorful textiles' },
@@ -58,6 +67,16 @@ const galleryImages = [
 ];
 
 function Home() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 15000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const recentContent = [...newsData, ...blogData]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 3);
@@ -75,55 +94,104 @@ function Home() {
       <Box
         sx={{
           position: 'relative',
-          minHeight: { xs: '80vh', md: '140vh' },
+          minHeight: { xs: '80vh', md: '90vh' },
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
           backgroundColor: 'primary.main',
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundImage:
-              'url(https://t3.ftcdn.net/jpg/02/14/30/12/240_F_214301281_IABBckv4fOl4igc0rlOaJcvCnHCCAcsI.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            zIndex: 0,
-          },
-          '&::after': {
-            content: '""',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: 1,
-          },
         }}
       >
-        {/* Logo fixed at top-start */}
+        {heroImages.map((image, index) => (
+          <Box
+            key={index}
+            sx={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: currentImageIndex === index ? 1 : 0,
+              transition: 'opacity 2s ease-in-out',
+              zIndex: 0,
+            }}
+          />
+        ))}
         <Box
           sx={{
             position: 'absolute',
-            top: 20,
-            left: 20,
-            zIndex: 3,
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(26, 26, 46, 0.75)',
+            zIndex: 1,
+          }}
+        />
+        <Container
+          sx={{
+            position: 'relative',
+            zIndex: 2,
+            py: { xs: 8, md: 12 },
           }}
         >
-          <img
-            src={logo}
-            alt="Logo"
-            style={{
-              width: '180px',
-              height: 'auto',
-              objectFit: 'contain',
-            }}
-          />
-        </Box>
+          <Box sx={{ maxWidth: 800 }}>
+            <Typography
+              variant="h1"
+              sx={{
+                color: 'primary.contrastText',
+                fontWeight: 700,
+                mb: 3,
+                fontSize: { xs: '2.5rem', md: '3.5rem' },
+              }}
+            >
+              Premium Textile Manufacturing Excellence
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                color: 'primary.contrastText',
+                mb: 4,
+                opacity: 0.95,
+              }}
+            >
+              Premium textile manufacturing with uncompromising quality, sustainable practices, and
+              innovative solutions for global markets.
+            </Typography>
+            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+              <Button
+                component={Link}
+                to="/services"
+                variant="contained"
+                color="secondary"
+                size="large"
+                endIcon={<ArrowForwardIcon />}
+              >
+                Explore Services
+              </Button>
+              <Button
+                component={Link}
+                to="/booking"
+                variant="outlined"
+                size="large"
+                sx={{
+                  borderColor: 'primary.contrastText',
+                  color: 'primary.contrastText',
+                  '&:hover': {
+                    borderColor: 'secondary.main',
+                    backgroundColor: 'secondary.main',
+                    color: 'primary.main',
+                  },
+                }}
+              >
+                Book a Visit
+              </Button>
+            </Box>
+          </Box>
+        </Container>
       </Box>
 
       <Section py={10}>

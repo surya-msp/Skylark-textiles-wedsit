@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import {
   AppBar,
@@ -19,11 +20,10 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const navItems = [
   { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'News', path: '/news' },
-  { label: 'Blog', path: '/blog' },
-  { label: 'Events', path: '/events' },
+  { label: 'About Us', path: '/about' },
+  { label: 'Infrastructure', path: '/services' },
+  { label: 'Certificate & Sustainability', path: '/events' },
+  { label: 'ESG', path: '/blog' },
   { label: 'Contact', path: '/contact' },
 ];
 
@@ -64,22 +64,21 @@ function Header() {
               minHeight: { xs: 64, md: 80 },
             }}
           >
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
               <Box
+                component="img"
+                src={logo}
+                alt="Skylark Textiles"
                 sx={{
-                  fontFamily: '"Cormorant Garamond", serif',
-                  fontSize: { xs: '1.5rem', md: '1.75rem' },
-                  fontWeight: 700,
-                  color: 'primary.main',
-                  letterSpacing: '0.05em',
-                  transition: 'color 0.3s ease',
+                  height: { xs: '50px', md: '60px' },
+                  width: 'auto',
+                  objectFit: 'contain',
+                  transition: 'transform 0.3s ease',
                   '&:hover': {
-                    color: 'secondary.main',
+                    transform: 'scale(1.05)',
                   },
                 }}
-              >
-                SKYLARK TEXTILES
-              </Box>
+              />
             </Link>
 
             <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1, alignItems: 'center' }}>
