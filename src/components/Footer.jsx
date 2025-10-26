@@ -138,16 +138,18 @@ function Footer() {
                 <LocationOnIcon sx={{ fontSize: 20, mt: 0.3, opacity: 0.8 }} />
                 <Typography variant="body2" sx={{ opacity: 0.9, lineHeight: 1.6 }}>
                   {/* TODO: Replace with actual address from PDF */}
-                  123 Industrial Estate<br />
-                  Textile Hub, City 500001<br />
-                  Country
+                  2/206, Tiruppur Main Road, <br />
+                  Gudimangalam, Udumalpet,<br />
+                  Thiruppur District - 642 201.,<br />
+                  Tamil Nadu, INDIA
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
                 <PhoneIcon sx={{ fontSize: 20, opacity: 0.8 }} />
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
                   {/* TODO: Replace with actual phone from PDF */}
-                  +1 (555) 123-4567
+                  +91 94420 09317<br/>
+                  +91 99438 49317
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
