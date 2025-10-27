@@ -110,18 +110,6 @@ function Header() {
                   {item.label}
                 </Button>
               ))}
-              {/* <Button
-                component={Link}
-                to="/booking"
-                variant="contained"
-                color="secondary"
-                sx={{
-                  ml: 2,
-                  fontWeight: 600,
-                }}
-              >
-                Book a Visit
-              </Button> */}
             </Box>
 
             <IconButton
@@ -179,23 +167,6 @@ function Header() {
                 </ListItemButton>
               </ListItem>
             ))}
-            {/* <ListItem disablePadding>
-              <ListItemButton
-                component={Link}
-                to="/booking"
-                onClick={handleDrawerToggle}
-                sx={{ py: 1.5 }}
-              >
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  fullWidth
-                  sx={{ fontWeight: 600 }}
-                >
-                  Book a Visit
-                </Button>
-              </ListItemButton>
-            </ListItem> */}
           </List>
         </Box>
       </Drawer>

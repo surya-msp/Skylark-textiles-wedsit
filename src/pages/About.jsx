@@ -6,38 +6,6 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import EnergySavingsLeafIcon from '@mui/icons-material/EnergySavingsLeaf';
 import GroupsIcon from '@mui/icons-material/Groups';
 
-const timelineSteps = [
-  {
-    year: '1985',
-    label: 'Foundation',
-    description: 'Skylark Textiles was established with a vision to deliver premium quality textiles to global markets.',
-  },
-  {
-    year: '1995',
-    label: 'Expansion',
-    description: 'Expanded operations with new weaving and dyeing facilities, doubling production capacity.',
-  },
-  {
-    year: '2005',
-    label: 'ISO Certification',
-    description: 'Achieved ISO 9001 certification, establishing our commitment to quality management systems.',
-  },
-  {
-    year: '2015',
-    label: 'Sustainability Initiative',
-    description: 'Launched comprehensive sustainability program with renewable energy and water conservation measures.',
-  },
-  {
-    year: '2020',
-    label: 'Global Recognition',
-    description: 'Recognized as a leading textile manufacturer, serving major international brands across continents.',
-  },
-  {
-    year: '2024',
-    label: 'Innovation Hub',
-    description: 'Established R&D center for sustainable textile innovations and smart fabric development.',
-  },
-];
 
 const certifications = [
   { name: 'ISO 9001:2015', description: 'Quality Management Systems' },
@@ -158,48 +126,6 @@ function About() {
             </Box>
           </Grid>
         </Grid>
-      </Section>
-
-      <Section py={10}>
-        <Typography variant="h2" sx={{ mb: 2, textAlign: 'center' }}>
-          Our Journey
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ mb: 6, textAlign: 'center', maxWidth: 800, mx: 'auto', color: 'text.secondary' }}
-        >
-          {/* TODO: Replace with actual timeline introduction from PDF */}
-          Milestones that have shaped our growth and defined our commitment to excellence.
-        </Typography>
-        <Box sx={{ maxWidth: 800, mx: 'auto' }}>
-          <Stepper orientation="vertical">
-            {timelineSteps.map((step, index) => (
-              <Step key={step.year} active={true}>
-                <StepLabel
-                  StepIconProps={{
-                    sx: {
-                      color: 'secondary.main',
-                      '&.Mui-active': { color: 'secondary.main' },
-                      '&.Mui-completed': { color: 'secondary.main' },
-                    },
-                  }}
-                >
-                  <Typography variant="h5" sx={{ fontWeight: 600 }}>
-                    {step.year}
-                  </Typography>
-                  <Typography variant="h6" sx={{ color: 'text.secondary', fontWeight: 500 }}>
-                    {step.label}
-                  </Typography>
-                </StepLabel>
-                <StepContent>
-                  <Typography variant="body1" sx={{ pb: 2 }}>
-                    {step.description}
-                  </Typography>
-                </StepContent>
-              </Step>
-            ))}
-          </Stepper>
-        </Box>
       </Section>
 
       <Section backgroundColor="background.default" py={10}>

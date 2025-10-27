@@ -120,78 +120,7 @@ function Home() {
             }}
           />
         ))}
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(26, 26, 46, 0.75)',
-            zIndex: 1,
-          }}
-        />
-        <Container
-          sx={{
-            position: 'relative',
-            zIndex: 2,
-            py: { xs: 8, md: 12 },
-          }}
-        >
-          <Box sx={{ maxWidth: 800 }}>
-            <Typography
-              variant="h1"
-              sx={{
-                color: 'primary.contrastText',
-                fontWeight: 700,
-                mb: 3,
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
-              }}
-            >
-              Premium Textile Manufacturing Excellence
-            </Typography>
-            <Typography
-              variant="h5"
-              sx={{
-                color: 'primary.contrastText',
-                mb: 4,
-                opacity: 0.95,
-              }}
-            >
-              Premium textile manufacturing with uncompromising quality, sustainable practices, and
-              innovative solutions for global markets.
-            </Typography>
-            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-              <Button
-                component={Link}
-                to="/services"
-                variant="contained"
-                color="secondary"
-                size="large"
-                endIcon={<ArrowForwardIcon />}
-              >
-                Explore Services
-              </Button>
-              <Button
-                component={Link}
-                to="/booking"
-                variant="outlined"
-                size="large"
-                sx={{
-                  borderColor: 'primary.contrastText',
-                  color: 'primary.contrastText',
-                  '&:hover': {
-                    borderColor: 'secondary.main',
-                    backgroundColor: 'secondary.main',
-                    color: 'primary.main',
-                  },
-                }}
-              >
-                Book a Visit
-              </Button>
-            </Box>
-          </Box>
-        </Container>
+
       </Box>
 
       <Section py={10}>
