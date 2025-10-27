@@ -21,9 +21,9 @@ import CloseIcon from '@mui/icons-material/Close';
 const navItems = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about' },
-  { label: 'Infrastructure', path: '/services' },
-  { label: 'Certificate & Sustainability', path: '/events' },
-  { label: 'ESG', path: '/blog' },
+  { label: 'Infrastructure', path: '/infrastructure' },
+  { label: 'Certificate & Sustainability', path: '/certificate-sustainability' },
+  { label: 'ESG', path: '/esg' },
   { label: 'Contact', path: '/contact' },
 ];
 
@@ -60,8 +60,8 @@ function Header() {
           <Toolbar
             sx={{
               justifyContent: 'space-between',
-              py: 2,
-              minHeight: { xs: 64, md: 80 },
+              py: 1,
+              minHeight: { xs: 56, md: 64 },
             }}
           >
             <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
@@ -70,7 +70,7 @@ function Header() {
                 src={logo}
                 alt="Skylark Textiles"
                 sx={{
-                  height: { xs: '50px', md: '60px' },
+                  height: { xs: '40px', md: '50px' },
                   width: 'auto',
                   objectFit: 'contain',
                   transition: 'transform 0.3s ease',

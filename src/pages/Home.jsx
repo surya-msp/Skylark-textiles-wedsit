@@ -19,9 +19,6 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Section from '../components/Section';
 import HighlightCard from '../components/HighlightCard';
 import Gallery from '../components/Gallery';
-import newsData from '../data/news.json';
-import blogData from '../data/blog.json';
-import logo from '../assets/logo.png'
 
 const highlights = [
   {
@@ -77,10 +74,6 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const recentContent = [...newsData, ...blogData]
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 3);
-
   return (
     <>
       <Helmet>
@@ -120,7 +113,78 @@ function Home() {
             }}
           />
         ))}
-
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(26, 26, 46, 0.75)',
+            zIndex: 1,
+          }}
+        />
+        <Container
+          sx={{
+            position: 'relative',
+            zIndex: 2,
+            py: { xs: 8, md: 12 },
+          }}
+        >
+          <Box sx={{ maxWidth: 800 }}>
+            <Typography
+              variant="h1"
+              sx={{
+                color: 'primary.contrastText',
+                fontWeight: 700,
+                mb: 3,
+                fontSize: { xs: '2.5rem', md: '3.5rem' },
+              }}
+            >
+              Premium Textile Manufacturing Excellence
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                color: 'primary.contrastText',
+                mb: 4,
+                opacity: 0.95,
+              }}
+            >
+              Premium textile manufacturing with uncompromising quality, sustainable practices, and
+              innovative solutions for global markets.
+            </Typography>
+            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+              <Button
+                component={Link}
+                to="/infrastructure"
+                variant="contained"
+                color="secondary"
+                size="large"
+                endIcon={<ArrowForwardIcon />}
+              >
+                Explore Infrastructure
+              </Button>
+              <Button
+                component={Link}
+                to="/contact"
+                variant="outlined"
+                size="large"
+                sx={{
+                  borderColor: 'primary.contrastText',
+                  color: 'primary.contrastText',
+                  '&:hover': {
+                    borderColor: 'secondary.main',
+                    backgroundColor: 'secondary.main',
+                    color: 'primary.main',
+                  },
+                }}
+              >
+                Contact Us
+              </Button>
+            </Box>
+          </Box>
+        </Container>
       </Box>
 
       <Section py={10}>
@@ -139,76 +203,7 @@ function Home() {
         <Gallery images={galleryImages} />
       </Section>
 
-      <Section backgroundColor="background.default" py={10}>
-        <Box sx={{ textAlign: 'center', mb: 6 }}>
-          <Typography variant="h2" sx={{ mb: 2 }}>
-            Latest Updates
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ maxWidth: 800, mx: 'auto', color: 'text.secondary' }}
-          >
-            Stay informed with our latest news, insights, and industry updates.
-          </Typography>
-        </Box>
-        <Grid container spacing={4}>
-          {recentContent.map((item) => (
-            <Grid item xs={12} md={4} key={item.id}>
-              <Card
-                sx={{
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: '0 12px 24px rgba(26, 26, 46, 0.12)',
-                  },
-                }}
-              >
-                {item.image && (
-                  <CardMedia
-                    component="div"
-                    sx={{
-                      paddingTop: '56.25%',
-                      backgroundColor: 'grey.200',
-                    }}
-                    image={item.image}
-                  />
-                )}
-                <CardContent sx={{ flexGrow: 1, p: 3 }}>
-                  <Typography
-                    variant="caption"
-                    sx={{ color: 'secondary.main', fontWeight: 600, mb: 1, display: 'block' }}
-                  >
-                    {new Date(item.date).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </Typography>
-                  <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-                    {item.title}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
-                    {item.excerpt}
-                  </Typography>
-                  <Button
-                    component={Link}
-                    to={newsData.includes(item) ? `/news/${item.slug}` : `/blog/${item.slug}`}
-                    endIcon={<ArrowForwardIcon />}
-                    sx={{ mt: 'auto' }}
-                  >
-                    Read More
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Section>
-
-      <Section py={10}>
+      <Section py={10} backgroundColor="background.default">
         <Box
           sx={{
             textAlign: 'center',
@@ -226,12 +221,12 @@ function Home() {
           </Typography>
           <Button
             component={Link}
-            to="/booking"
+            to="/contact"
             variant="contained"
             color="secondary"
             size="large"
           >
-            Book a Visit
+            Contact Us
           </Button>
         </Box>
       </Section>

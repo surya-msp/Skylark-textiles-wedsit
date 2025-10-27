@@ -7,14 +7,10 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
-import News from './pages/News';
-import NewsArticle from './pages/NewsArticle';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import Events from './pages/Events';
+import Infrastructure from './pages/Infrastructure';
+import CertificateSustainability from './pages/CertificateSustainability';
+import ESG from './pages/ESG';
 import Contact from './pages/Contact';
-import Booking from './pages/Booking';
 
 function App() {
   return (
@@ -34,14 +30,10 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/news/:slug" element={<NewsArticle />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/events" element={<Events />} />
+                <Route path="/infrastructure" element={<Infrastructure />} />
+                <Route path="/certificate-sustainability" element={<CertificateSustainability />} />
+                <Route path="/esg" element={<ESG />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/booking" element={<Booking />} />
               </Routes>
             </Box>
             <Footer />
