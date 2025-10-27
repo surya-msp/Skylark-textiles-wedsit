@@ -31,13 +31,33 @@ const facilities = [
 ];
 
 const infrastructureImages = [
-  { src: 'https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=1200', title: 'Modern Textile Facility' },
-  { src: 'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=1200', title: 'Production Floor' },
-  { src: 'https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=1200', title: 'Quality Control' },
-  { src: 'https://images.pexels.com/photos/1143754/pexels-photo-1143754.jpeg?auto=compress&cs=tinysrgb&w=1200', title: 'Fabric Storage' },
-  { src: 'https://images.pexels.com/photos/5705471/pexels-photo-5705471.jpeg?auto=compress&cs=tinysrgb&w=1200', title: 'Textile Display' },
-  { src: 'https://images.pexels.com/photos/3738383/pexels-photo-3738383.jpeg?auto=compress&cs=tinysrgb&w=1200', title: 'Thread Production' },
+  {
+    src: "https://static.vecteezy.com/system/resources/thumbnails/028/585/035/small/modern-textile-factory-with-automated-looms-weaving-patterns-ai-generative-photo.jpg",
+    title: "Modern Textile Factory",
+  },
+  {
+    src: "https://media.istockphoto.com/id/585525382/photo/embroidery-machine-at-a-clothing-factory.jpg?s=612x612&w=0&k=20&c=O2DiaPUPznBOYIf0HwvpmfcF6L2W4DTv5SmVms4CrdA=",
+    title: "Garment Production Line",
+  },
+  {
+    src: "https://media.istockphoto.com/id/185059413/photo/textile-industry-laboratory.jpg?s=612x612&w=0&k=20&c=8Reyasfr-_DLI-4PrzwFEArzMXofjD2eB3xaf6qwc3s=",
+    title: "Fabric Quality Inspection",
+  },
+  {
+    src: "https://media.istockphoto.com/id/507215227/photo/fabric-warehouse.jpg?s=612x612&w=0&k=20&c=TJc8I7n9rd27TJsUhz3YomG3OPwv9R1da6989-lwu6M=",
+    title: "Textile Warehouse Storage",
+  },
+  {
+    src: "https://www.shutterstock.com/image-photo/luxury-fashionable-brand-new-interior-600nw-191362898.jpg",
+    title: "Fabric Showroom Display",
+  },
+  {
+    src: "https://media.istockphoto.com/id/1002051158/photo/textile-factory-equipment-with-spools-of-white-yarn.jpg?s=612x612&w=0&k=20&c=h22lVPO0khz0CsY0o-nQpspLZvTtGF6dTO3Zqhk9nxo=",
+    title: "Thread Spool Manufacturing",
+  },
 ];
+
+
 
 function Infrastructure() {
   return (

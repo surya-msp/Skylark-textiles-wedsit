@@ -44,11 +44,12 @@ const highlights = [
 ];
 
 const heroImages = [
+  'https://img.freepik.com/premium-photo/luxury-shopping-mall-department-clothing-store-interior_271317-1366.jpg',
+  'https://thumbs.dreamstime.com/b/brand-new-interior-cloth-store-luxury-fashionable-40901696.jpg',
+  'https://thumbs.dreamstime.com/b/fashion-store-men-clothing-store-interior-clothes-shop-mannequin-modern-57351643.jpg',
+  'https://t3.ftcdn.net/jpg/03/05/92/84/360_F_305928424_visqTeQnMLvzfT3XBtDZWX9TNTlVLML6.jpg',
   'https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=3840',
-  'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=3840',
-  'https://images.pexels.com/photos/1148957/pexels-photo-1148957.jpeg?auto=compress&cs=tinysrgb&w=3840',
-  'https://images.pexels.com/photos/1143754/pexels-photo-1143754.jpeg?auto=compress&cs=tinysrgb&w=3840',
-  'https://images.pexels.com/photos/5705471/pexels-photo-5705471.jpeg?auto=compress&cs=tinysrgb&w=3840',
+  'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdGhpbmclMjBzdG9yZXxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000'
 ];
 
 const galleryImages = [
@@ -69,7 +70,7 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 15000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
@@ -87,7 +88,8 @@ function Home() {
       <Box
         sx={{
           position: 'relative',
-          minHeight: { xs: '80vh', md: '90vh' },
+          width: '100%',
+          height: { xs: '80vh', sm: '90vh', md: '100vh' }, // full viewport height scaling
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
@@ -101,14 +103,14 @@ function Home() {
               position: 'absolute',
               top: 0,
               left: 0,
-              right: 0,
-              bottom: 0,
+              width: '100%',
+              height: '100%',
               backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
+              backgroundSize: 'cover', 
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
+              transition: 'opacity 1.5s ease-in-out',
               opacity: currentImageIndex === index ? 1 : 0,
-              transition: 'opacity 2s ease-in-out',
               zIndex: 0,
             }}
           />
