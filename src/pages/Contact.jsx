@@ -13,28 +13,27 @@ const contactInfo = [
     icon: <LocationOnIcon fontSize="large" />,
     title: 'Address',
     content: [
-      'Skylark Textiles Manufacturing',
-      '123 Industrial Estate',
-      'Textile Hub, City 500001',
-      'Country',
+      '2/206, Tiruppur Main Road',
+      'Gudimangalam, Udumalpet',
+      'Thiruppur District - 642 201.',
+      'Tamil Nadu, INDIA'
     ],
   },
   {
     icon: <PhoneIcon fontSize="large" />,
     title: 'Phone',
-    content: ['+1 (555) 123-4567', '+1 (555) 123-4568'],
+    content: ['+91 94420 09317', '+91 99438 49317'],
   },
   {
     icon: <EmailIcon fontSize="large" />,
     title: 'Email',
-    content: ['info@skylarktextiles.com', 'sales@skylarktextiles.com'],
+    content: ['info@skylarktextiles.com'],
   },
   {
     icon: <AccessTimeIcon fontSize="large" />,
     title: 'Business Hours',
     content: [
-      'Monday - Friday: 9:00 AM - 6:00 PM',
-      'Saturday: 9:00 AM - 2:00 PM',
+      'Monday - Saturday: 9:00 AM - 9:00 PM',
       'Sunday: Closed',
     ],
   },
@@ -123,22 +122,26 @@ function Contact() {
               <Typography variant="h5" sx={{ mb: 3, fontWeight: 600 }}>
                 Our Location
               </Typography>
+
               <Box
                 sx={{
-                  width: '100%',
+                  width: "100%",
                   height: 400,
-                  backgroundColor: 'grey.200',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  border: '1px solid',
-                  borderColor: 'divider',
+                  borderRadius: 2,
+                  overflow: "hidden",
+                  border: "1px solid",
+                  borderColor: "divider",
                 }}
               >
-                <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-                  {/* TODO: Replace with actual map embed or coordinates from PDF */}
-                  Map placeholder - Replace with actual map embed or interactive map component
-                </Typography>
+                <iframe
+                  title="Google Map Location"
+                  src="https://www.google.com/maps?q=2/206,+Tiruppur+Main+Road,+Gudimangalam,+Udumalpet,+Thiruppur+District+-+642201,+Tamil+Nadu,+India&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
+                ></iframe>
               </Box>
             </Box>
           </Grid>
