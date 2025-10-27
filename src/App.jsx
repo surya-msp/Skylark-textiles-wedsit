@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import theme from './theme/theme';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Infrastructure from './pages/Infrastructure';
@@ -18,6 +19,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
+          <ScrollToTop />
           <Box
             sx={{
               display: 'flex',
