@@ -59,8 +59,8 @@ function About() {
             >
               <Box
                 component="img"
-                src="/assets/about-story.jpg"
-                alt="Skylark Textiles heritage and history"
+                src="https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Colorful textile fabrics and yarns"
                 sx={{
                   position: 'absolute',
                   top: 0,
