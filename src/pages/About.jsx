@@ -59,7 +59,7 @@ function About() {
             >
               <Box
                 component="img"
-                src="https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="https://images.unsplash.com/photo-1598616068517-c75ad397a436?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRleHRpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
                 alt="Colorful textile fabrics and yarns"
                 sx={{
                   position: 'absolute',
