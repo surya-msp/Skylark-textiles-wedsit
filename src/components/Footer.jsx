@@ -13,6 +13,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import footerLogo2 from '../assets/footerLogo2.png';
 
 const socialLinks = [
   { icon: <FacebookIcon />, url: '#', label: 'Facebook' },
@@ -27,84 +28,103 @@ function Footer() {
       sx={{
         backgroundColor: 'primary.main',
         color: 'primary.contrastText',
-        pt: 2.5,
-        pb: 2,
+        pt: 5,
+        pb: 3,
         mt: 'auto',
       }}
     >
-      <Container>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
-            <Typography
-              variant="h6"
+      <Container maxWidth="lg">
+        {/* TOP SECTION */}
+        <Grid container spacing={4} alignItems="flex-start">
+          {/* Left: Logo + Description */}
+          <Grid item xs={12} md={7} lg={8}>
+            <Box
               sx={{
-                fontFamily: '"Cormorant Garamond", serif',
-                fontWeight: 700,
-                mb: 1,
-                letterSpacing: '0.05em',
-                fontSize: '1.1rem',
+                display: 'flex',
+                alignItems: { xs: 'flex-start', sm: 'center' },
+                flexDirection: { xs: 'column', sm: 'row' },
+                flexWrap: 'wrap',
+                gap: 15,
               }}
             >
-              SKYLARK TEXTILES
-            </Typography>
-            <Typography variant="body2" sx={{ mb: 1.5, lineHeight: 1.6, opacity: 0.9, fontSize: '0.85rem' }}>
-              A leading textile manufacturer committed to excellence in quality,
-              innovation, and sustainable practices. Serving global markets with
-              premium yarns, fabrics, and textile solutions.
-            </Typography>
-            <Box sx={{ display: 'flex', gap: 0.8 }}>
-              {socialLinks.map((social) => (
-                <IconButton
-                  key={social.label}
-                  href={social.url}
-                  aria-label={social.label}
-                  size="small"
+              {/* Logo */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: { xs: 'flex-start', sm: 'center' },
+                  textAlign: { xs: 'left', sm: 'center' },
+                }}
+              >
+                <img
+                  src={footerLogo2}
+                  alt="Skylark Textiles"
+                  style={{ width: '180px', height: 'auto' }}
+                />
+                <Typography
+                  variant="body2"
                   sx={{
-                    color: 'primary.contrastText',
-                    border: '1px solid rgba(255, 255, 255, 0.3)',
-                    '&:hover': {
-                      backgroundColor: 'secondary.main',
-                      color: 'primary.main',
-                      borderColor: 'secondary.main',
-                    },
-                    transition: 'all 0.3s ease',
+                    mt: 1.2,
+                    opacity: 0.8,
+                    fontSize: '0.75rem',
                   }}
                 >
-                  {social.icon}
-                </IconButton>
-              ))}
+                  © {new Date().getFullYear()} Skylark Textiles. All rights reserved.
+                </Typography>
+              </Box>
+
+              {/* Description */}
+              <Box sx={{ flex: 1, minWidth: '250px', maxWidth: '350px' }}>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    mb: 1.5,
+                    lineHeight: 1.6,
+                    opacity: 0.9,
+                    fontSize: '0.9rem',
+                  }}
+                >
+                  A leading textile manufacturer committed to excellence in quality,
+                  innovation, and sustainable practices. Serving global markets with
+                  premium yarns, fabrics, and textile solutions.
+                </Typography>
+              </Box>
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          {/* Right: Contact */}
+          <Grid item xs={12} md={5} lg={4}>
             <Typography
               variant="h6"
               sx={{
-                mb: 1,
+                mb: 1.5,
                 fontWeight: 600,
-                fontSize: '1rem',
+                fontSize: '1.1rem',
                 letterSpacing: '0.05em',
               }}
             >
               Contact
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.2 }}>
               <Box sx={{ display: 'flex', gap: 1, alignItems: 'flex-start' }}>
-                <LocationOnIcon sx={{ fontSize: 16, mt: 0.2, opacity: 0.8 }} />
-                <Typography variant="body2" sx={{ opacity: 0.9, lineHeight: 1.4, fontSize: '0.8rem' }}>
+                <LocationOnIcon sx={{ fontSize: 18, mt: 0.2, opacity: 0.8 }} />
+                <Typography
+                  variant="body2"
+                  sx={{ opacity: 0.9, lineHeight: 1.5, fontSize: '0.85rem' }}
+                >
                   2/206, Tiruppur Main Road, Gudimangalam, Udumalpet,<br />
                   Thiruppur District - 642 201., Tamil Nadu, INDIA
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-                <PhoneIcon sx={{ fontSize: 16, opacity: 0.8 }} />
-                <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.8rem' }}>
+                <PhoneIcon sx={{ fontSize: 18, opacity: 0.8 }} />
+                <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.85rem' }}>
                   +91 94420 09317, +91 99438 49317
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-                <EmailIcon sx={{ fontSize: 16, opacity: 0.8 }} />
-                <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.8rem' }}>
+                <EmailIcon sx={{ fontSize: 18, opacity: 0.8 }} />
+                <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.85rem' }}>
                   info@skylarktextiles.com
                 </Typography>
               </Box>
@@ -112,28 +132,62 @@ function Footer() {
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 1.5, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
+        <Divider sx={{ my: 3, borderColor: 'rgba(255, 255, 255, 0.15)' }} />
 
+        {/* BOTTOM SECTION */}
         <Box
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' },
-            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
             alignItems: 'center',
-            gap: 1.5,
+            gap: 2.5,
+            textAlign: 'center',
           }}
         >
-          <Typography variant="body2" sx={{ opacity: 0.8, fontSize: '0.75rem' }}>
-            © {new Date().getFullYear()} Skylark Textiles. All rights reserved.
-          </Typography>
-          <Box sx={{ display: 'flex', gap: 2.5 }}>
+          {/* Social Icons */}
+          <Box sx={{ display: 'flex', gap: 1 }}>
+            {socialLinks.map((social) => (
+              <IconButton
+                key={social.label}
+                href={social.url}
+                aria-label={social.label}
+                size="small"
+                sx={{
+                  color: 'primary.contrastText',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  '&:hover': {
+                    backgroundColor: 'secondary.main',
+                    color: 'primary.main',
+                    borderColor: 'secondary.main',
+                  },
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                {social.icon}
+              </IconButton>
+            ))}
+          </Box>
+
+          {/* Divider Dot */}
+          <Box
+            sx={{
+              width: 4,
+              height: 4,
+              borderRadius: '50%',
+              backgroundColor: 'rgba(255, 255, 255, 0.4)',
+            }}
+          />
+
+          {/* Links */}
+          <Box sx={{ display: 'flex', gap: 2 }}>
             <Link
               to="/privacy"
               style={{
                 textDecoration: 'none',
                 color: 'inherit',
-                fontSize: '0.75rem',
-                opacity: 0.8,
+                fontSize: '0.8rem',
+                opacity: 0.85,
               }}
             >
               Privacy Policy
@@ -143,8 +197,8 @@ function Footer() {
               style={{
                 textDecoration: 'none',
                 color: 'inherit',
-                fontSize: '0.75rem',
-                opacity: 0.8,
+                fontSize: '0.8rem',
+                opacity: 0.85,
               }}
             >
               Terms of Service

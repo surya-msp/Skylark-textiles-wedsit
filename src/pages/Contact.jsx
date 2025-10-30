@@ -158,7 +158,7 @@ function Contact() {
             facilities, meet our team, and see our production processes in action.
           </Typography>
           <Typography variant="body1" sx={{ fontWeight: 600, color: 'secondary.main' }}>
-            Call us at +1 (555) 123-4567 or use our booking form to schedule your visit.
+            Call us at +91 94420 09317 or use our booking form to schedule your visit.
           </Typography>
         </Box>
       </Section>

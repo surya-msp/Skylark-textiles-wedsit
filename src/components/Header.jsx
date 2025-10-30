@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/logo.png';
+import headerLogo from '../assets/headerLogo.png';
 import { Link, useLocation } from 'react-router-dom';
 import {
   AppBar,
@@ -67,10 +67,10 @@ function Header() {
             <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
               <Box
                 component="img"
-                src={logo}
+                src={headerLogo}
                 alt="Skylark Textiles"
                 sx={{
-                  height: { xs: '40px', md: '50px' },
+                  height: { xs: '40px', md: '55px' },
                   width: 'auto',
                   objectFit: 'contain',
                   transition: 'transform 0.3s ease',
