@@ -39,21 +39,13 @@ function About() {
               Our Story
             </Typography>
             <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8 }}>
-              {/* TODO: Replace with actual company history from PDF */}
-              Founded with a vision to revolutionize textile manufacturing, Skylark Textiles has
-              grown from a small-scale operation to a globally recognized manufacturer. Our journey
-              has been defined by continuous innovation, unwavering commitment to quality, and a
-              deep respect for both people and the environment.
+              Skylark Textiles Pvt Ltd is a distinguished name in the textile industry, renowned for its innovative approach to fabric production and its commitment to quality. Among its diverse offerings, the Colour Mélange collection stands out as a testament to the company's dedication to creativity and excellence.
             </Typography>
             <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8 }}>
-              Over the decades, we have invested heavily in state-of-the-art technology while
-              preserving traditional craftsmanship. This unique blend allows us to produce textiles
-              that combine contemporary design with timeless quality.
+              Colour Mélange refers to a unique blend of fibers dyed in different shades before being spun into yarn, resulting in a rich, textured appearance that adds depth and character to any fabric. This technique not only enhances the aesthetic appeal but also provides a versatile palette for designers seeking to create garments and home textiles with a distinct and contemporary flair.
             </Typography>
             <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-              Today, we serve clients across multiple continents, partnering with leading fashion
-              brands, home textile companies, and industrial textile users. Our reputation is built
-              on reliability, innovation, and an uncompromising commitment to excellence.
+              Skylark Textiles Pvt Ltd has positioned itself as a leader in this niche, continually pushing the boundaries of textile design and inspiring the industry with its vibrant, innovative creations.
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
