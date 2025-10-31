@@ -2,7 +2,6 @@ import { Box, Typography, Grid } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const preProductionSteps = [
   {
@@ -73,24 +72,30 @@ const postProductionSteps = [
   },
 ];
 
-function ProcessCard({ title, description, image }) {
+function ProcessCard({ title, description, image, number }) {
   return (
     <Box
       sx={{
+        display: 'flex',
+        flexDirection: 'column',
         height: '100%',
         borderRadius: 2,
         overflow: 'hidden',
+        border: '1px solid',
+        borderColor: 'divider',
         transition: 'all 0.3s ease',
+        backgroundColor: 'background.paper',
         '&:hover': {
-          transform: 'translateY(-8px)',
-          boxShadow: '0 12px 30px rgba(0,0,0,0.15)',
+          transform: 'translateY(-4px)',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+          borderColor: 'secondary.main',
         },
       }}
     >
       <Box
         sx={{
           position: 'relative',
-          height: 220,
+          height: 200,
           overflow: 'hidden',
           backgroundColor: 'grey.200',
         }}
@@ -103,21 +108,49 @@ function ProcessCard({ title, description, image }) {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            transition: 'transform 0.3s ease',
-            '&:hover': {
-              transform: 'scale(1.05)',
-            },
           }}
         />
+        {number && (
+          <Box
+            sx={{
+              position: 'absolute',
+              top: 16,
+              right: 16,
+              width: 40,
+              height: 40,
+              borderRadius: '50%',
+              backgroundColor: 'secondary.main',
+              color: 'white',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontWeight: 700,
+              fontSize: '1.1rem',
+            }}
+          >
+            {number}
+          </Box>
+        )}
       </Box>
-      <Box sx={{ p: 3, backgroundColor: 'background.paper' }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1.5 }}>
-          <CheckCircleIcon sx={{ color: 'secondary.main', fontSize: 20 }} />
-          <Typography variant="h6" sx={{ fontWeight: 600 }}>
-            {title}
-          </Typography>
-        </Box>
-        <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.7 }}>
+      <Box
+        sx={{
+          p: 3,
+          display: 'flex',
+          flexDirection: 'column',
+          flexGrow: 1,
+        }}
+      >
+        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1.5, minHeight: 64 }}>
+          {title}
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            color: 'text.secondary',
+            lineHeight: 1.7,
+            flexGrow: 1,
+          }}
+        >
           {description}
         </Typography>
       </Box>
@@ -154,7 +187,7 @@ function Apparel() {
         </Box>
 
         <Box sx={{ mb: 10 }}>
-          <Box sx={{ mb: 5 }}>
+          <Box sx={{ mb: 5, textAlign: 'center' }}>
             <Typography
               variant="overline"
               sx={{
@@ -170,7 +203,7 @@ function Apparel() {
             <Typography variant="h4" sx={{ fontWeight: 700, mb: 1 }}>
               Pre-Production
             </Typography>
-            <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4 }}>
+            <Typography variant="body1" sx={{ color: 'text.secondary' }}>
               The planning and preparation phase where designs come to life
             </Typography>
           </Box>
@@ -178,14 +211,14 @@ function Apparel() {
           <Grid container spacing={4}>
             {preProductionSteps.map((step, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
-                <ProcessCard {...step} />
+                <ProcessCard {...step} number={index + 1} />
               </Grid>
             ))}
           </Grid>
         </Box>
 
         <Box sx={{ mb: 10 }}>
-          <Box sx={{ mb: 5 }}>
+          <Box sx={{ mb: 5, textAlign: 'center' }}>
             <Typography
               variant="overline"
               sx={{
@@ -201,7 +234,7 @@ function Apparel() {
             <Typography variant="h4" sx={{ fontWeight: 700, mb: 1 }}>
               Production
             </Typography>
-            <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4 }}>
+            <Typography variant="body1" sx={{ color: 'text.secondary' }}>
               Transforming fabric into finished garments with precision and care
             </Typography>
           </Box>
@@ -209,14 +242,14 @@ function Apparel() {
           <Grid container spacing={4}>
             {productionSteps.map((step, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
-                <ProcessCard {...step} />
+                <ProcessCard {...step} number={index + 1} />
               </Grid>
             ))}
           </Grid>
         </Box>
 
         <Box>
-          <Box sx={{ mb: 5 }}>
+          <Box sx={{ mb: 5, textAlign: 'center' }}>
             <Typography
               variant="overline"
               sx={{
@@ -232,7 +265,7 @@ function Apparel() {
             <Typography variant="h4" sx={{ fontWeight: 700, mb: 1 }}>
               Post-Production
             </Typography>
-            <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4 }}>
+            <Typography variant="body1" sx={{ color: 'text.secondary' }}>
               Final touches and quality assurance for perfect delivery
             </Typography>
           </Box>
@@ -240,7 +273,7 @@ function Apparel() {
           <Grid container spacing={4}>
             {postProductionSteps.map((step, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
-                <ProcessCard {...step} />
+                <ProcessCard {...step} number={index + 1} />
               </Grid>
             ))}
           </Grid>
