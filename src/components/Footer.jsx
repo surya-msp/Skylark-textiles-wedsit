@@ -28,8 +28,8 @@ function Footer() {
       sx={{
         backgroundColor: 'primary.main',
         color: 'primary.contrastText',
-        pt: { xs: 4, md: 6 },
-        pb: { xs: 3, md: 4 },
+        pt: { xs: 2, md: 3 },
+        pb: { xs: 2, md: 3 },
         mt: 'auto',
       }}
     >
@@ -42,7 +42,7 @@ function Footer() {
           justifyContent="space-between"
         >
           {/* Left: Logo & Description */}
-          <Grid item xs={12} md={7} lg={8}>
+          <Grid item xs={12} md={7} lg={7}>
             <Box
               sx={{
                 display: 'flex',
@@ -51,6 +51,7 @@ function Footer() {
                 justifyContent: 'flex-start',
                 gap: { xs: 3, sm: 6, md: 10 },
                 flexWrap: 'wrap',
+                ml:"5px"
               }}
             >
               <Box
@@ -71,7 +72,7 @@ function Footer() {
               <Box
                 sx={{
                   flex: 1,
-                  minWidth: { xs: '100%', sm: '250px' },
+                  minWidth: { xs: '100%', sm: '250px' , md:"450px" },
                   maxWidth: '380px',
                 }}
               >
@@ -81,7 +82,7 @@ function Footer() {
                     mb: 1.5,
                     lineHeight: 1.6,
                     opacity: 0.9,
-                    fontSize: { xs: '0.85rem', sm: '0.9rem' },
+                    fontSize: { xs: '0.75rem', sm: '0.8rem' },
                   }}
                 >
                   A leading textile manufacturer committed to excellence in quality,
@@ -93,7 +94,7 @@ function Footer() {
           </Grid>
 
           {/* Right: Contact Info */}
-          <Grid item xs={12} md={5} lg={4}>
+          <Grid item xs={12} md={5} lg={5}>
             <Typography
               variant="h6"
               sx={{
@@ -113,20 +114,18 @@ function Footer() {
                   sx={{
                     opacity: 0.9,
                     lineHeight: 1.5,
-                    fontSize: { xs: '0.8rem', sm: '0.85rem' },
+                    fontSize: { xs: '0.65rem', sm: '0.7rem' },
                   }}
                 >
-                  2/206, Tiruppur Main Road,<br />
-                  Gudimangalam Udumalpet,<br />
-                  Thiruppur District - 642 201.<br />
-                  Tamil Nadu, INDIA
+                  2/206, Tiruppur Main Road, Gudimangalam Udumalpet,<br />
+                  Thiruppur District - 642 201., Tamil Nadu, INDIA
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
                 <PhoneIcon sx={{ fontSize: 18, opacity: 0.8 }} />
                 <Typography
                   variant="body2"
-                  sx={{ opacity: 0.9, fontSize: { xs: '0.8rem', sm: '0.85rem' } }}
+                  sx={{ opacity: 0.9, fontSize: {  xs: '0.65rem', sm: '0.7rem'  } }}
                 >
                   +91 94420 09317, +91 99438 49317
                 </Typography>
@@ -135,7 +134,7 @@ function Footer() {
                 <EmailIcon sx={{ fontSize: 18, opacity: 0.8 }} />
                 <Typography
                   variant="body2"
-                  sx={{ opacity: 0.9, fontSize: { xs: '0.8rem', sm: '0.85rem' } }}
+                  sx={{ opacity: 0.9, fontSize: {  xs: '0.65rem', sm: '0.7rem'  } }}
                 >
                   info@skylarktextiles.com
                 </Typography>
@@ -144,7 +143,7 @@ function Footer() {
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 3, borderColor: 'rgba(255,255,255,0.15)' }} />
+        <Divider sx={{ my: 1, borderColor: 'rgba(255,255,255,0.15)' }} />
 
         {/* === BOTTOM SECTION === */}
         <Box

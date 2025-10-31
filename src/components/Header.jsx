@@ -22,7 +22,7 @@ const navItems = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about' },
   { label: 'Infrastructure', path: '/infrastructure' },
-  { label: 'Certificate & Sustainability', path: '/certificate-sustainability' },
+  { label: 'Sustainability', path: '/sustainability' },
   { label: 'ESG', path: '/esg' },
   { label: 'Contact', path: '/contact' },
 ];

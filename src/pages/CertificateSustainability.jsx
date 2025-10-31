@@ -75,11 +75,11 @@ function CertificateSustainability() {
       </Helmet>
 
       <PageHero
-        title="Certifications & Sustainability"
+        title="Sustainability"
         subtitle="Committed to quality, environmental stewardship, and social responsibility"
       />
 
-      <Section py={10}>
+      {/* <Section py={10}>
         <Container>
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Typography variant="h2" sx={{ mb: 2 }}>
@@ -130,7 +130,7 @@ function CertificateSustainability() {
             ))}
           </Grid>
         </Container>
-      </Section>
+      </Section> */}
 
       <Section backgroundColor="background.default" py={10}>
         <Container>

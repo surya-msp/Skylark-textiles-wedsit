@@ -33,7 +33,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/infrastructure" element={<Infrastructure />} />
-                <Route path="/certificate-sustainability" element={<CertificateSustainability />} />
+                <Route path="/sustainability" element={<CertificateSustainability />} />
                 <Route path="/esg" element={<ESG />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
