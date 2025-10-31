@@ -99,17 +99,13 @@ function ContactForm() {
             error={!!errors.name}
             helperText={errors.name}
             required
-            variant="outlined"
+            variant="standard"
             sx={{
-              '& .MuiOutlinedInput-root': {
-                backgroundColor: 'background.paper',
-                '&:hover fieldset': {
-                  borderColor: 'secondary.main',
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'secondary.main',
-                  borderWidth: 2,
-                },
+              '& .MuiInput-underline:after': {
+                borderBottomColor: 'secondary.main',
+              },
+              '& .MuiInputLabel-root.Mui-focused': {
+                color: 'secondary.main',
               },
             }}
           />
@@ -125,17 +121,13 @@ function ContactForm() {
             error={!!errors.email}
             helperText={errors.email}
             required
-            variant="outlined"
+            variant="standard"
             sx={{
-              '& .MuiOutlinedInput-root': {
-                backgroundColor: 'background.paper',
-                '&:hover fieldset': {
-                  borderColor: 'secondary.main',
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'secondary.main',
-                  borderWidth: 2,
-                },
+              '& .MuiInput-underline:after': {
+                borderBottomColor: 'secondary.main',
+              },
+              '& .MuiInputLabel-root.Mui-focused': {
+                color: 'secondary.main',
               },
             }}
           />
@@ -150,17 +142,13 @@ function ContactForm() {
             error={!!errors.phone}
             helperText={errors.phone}
             required
-            variant="outlined"
+            variant="standard"
             sx={{
-              '& .MuiOutlinedInput-root': {
-                backgroundColor: 'background.paper',
-                '&:hover fieldset': {
-                  borderColor: 'secondary.main',
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'secondary.main',
-                  borderWidth: 2,
-                },
+              '& .MuiInput-underline:after': {
+                borderBottomColor: 'secondary.main',
+              },
+              '& .MuiInputLabel-root.Mui-focused': {
+                color: 'secondary.main',
               },
             }}
           />
@@ -175,17 +163,13 @@ function ContactForm() {
             error={!!errors.subject}
             helperText={errors.subject}
             required
-            variant="outlined"
+            variant="standard"
             sx={{
-              '& .MuiOutlinedInput-root': {
-                backgroundColor: 'background.paper',
-                '&:hover fieldset': {
-                  borderColor: 'secondary.main',
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'secondary.main',
-                  borderWidth: 2,
-                },
+              '& .MuiInput-underline:after': {
+                borderBottomColor: 'secondary.main',
+              },
+              '& .MuiInputLabel-root.Mui-focused': {
+                color: 'secondary.main',
               },
             }}
           />
@@ -202,17 +186,13 @@ function ContactForm() {
             required
             multiline
             rows={6}
-            variant="outlined"
+            variant="standard"
             sx={{
-              '& .MuiOutlinedInput-root': {
-                backgroundColor: 'background.paper',
-                '&:hover fieldset': {
-                  borderColor: 'secondary.main',
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'secondary.main',
-                  borderWidth: 2,
-                },
+              '& .MuiInput-underline:after': {
+                borderBottomColor: 'secondary.main',
+              },
+              '& .MuiInputLabel-root.Mui-focused': {
+                color: 'secondary.main',
               },
             }}
           />
