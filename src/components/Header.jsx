@@ -23,6 +23,7 @@ const navItems = [
   { label: 'About Us', path: '/about' },
   { label: 'Infrastructure', path: '/infrastructure' },
   { label: 'Sustainability', path: '/sustainability' },
+  { label: 'Apparel', path: '/apparel' },
   { label: 'ESG', path: '/esg' },
   { label: 'Contact', path: '/contact' },
 ];

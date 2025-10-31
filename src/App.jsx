@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Infrastructure from './pages/Infrastructure';
 import CertificateSustainability from './pages/CertificateSustainability';
+import Apparel from './pages/Apparel';
 import ESG from './pages/ESG';
 import Contact from './pages/Contact';
 
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/infrastructure" element={<Infrastructure />} />
                 <Route path="/sustainability" element={<CertificateSustainability />} />
+                <Route path="/apparel" element={<Apparel />} />
                 <Route path="/esg" element={<ESG />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
