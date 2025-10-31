@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Paper } from '@mui/material';
+import { Box, Typography, Grid, Divider } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
@@ -56,110 +56,180 @@ function Contact() {
         breadcrumbs={[{ label: 'Contact', path: '/contact' }]}
       />
 
-      <Section py={10}>
-        <Grid container spacing={6}>
-          <Grid item xs={12} lg={6}>
-            <Typography variant="h3" sx={{ mb: 3 }}>
-              Get in Touch
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8, color: 'text.secondary' }}>
-              {/* TODO: Replace with actual contact intro from PDF */}
-              Have a question about our services, need a quote, or want to schedule a factory
-              visit? Fill out the form and our team will get back to you promptly.
-            </Typography>
+      <Section py={12}>
+        <Grid container spacing={8}>
+          <Grid item xs={12} lg={7}>
+            <Box sx={{ mb: 5 }}>
+              <Typography
+                variant="overline"
+                sx={{
+                  color: 'secondary.main',
+                  fontWeight: 600,
+                  letterSpacing: 2,
+                  mb: 1,
+                  display: 'block'
+                }}
+              >
+                GET IN TOUCH
+              </Typography>
+              <Typography variant="h3" sx={{ mb: 2, fontWeight: 700 }}>
+                Let's Start a Conversation
+              </Typography>
+              <Typography variant="body1" sx={{ lineHeight: 1.8, color: 'text.secondary', maxWidth: 600 }}>
+                Have a question about our services, need a quote, or want to schedule a factory visit?
+                Fill out the form and our team will get back to you promptly.
+              </Typography>
+            </Box>
             <ContactForm />
           </Grid>
 
-          <Grid item xs={12} lg={6}>
-            <Typography variant="h3" sx={{ mb: 4 }}>
-              Contact Information
-            </Typography>
-            <Grid container spacing={3}>
-              {contactInfo.map((info, index) => (
-                <Grid item xs={12} sm={6} key={index}>
-                  <Paper
-                    elevation={0}
+          <Grid item xs={12} lg={5}>
+            <Box
+              sx={{
+                position: 'sticky',
+                top: 100,
+                pl: { lg: 4 }
+              }}
+            >
+              <Typography
+                variant="h4"
+                sx={{
+                  mb: 4,
+                  fontWeight: 700,
+                  borderLeft: 4,
+                  borderColor: 'secondary.main',
+                  pl: 2
+                }}
+              >
+                Contact Information
+              </Typography>
+
+              <Box sx={{ mb: 5 }}>
+                {contactInfo.map((info, index) => (
+                  <Box
+                    key={index}
                     sx={{
-                      p: 3,
-                      height: '100%',
-                      border: '1px solid',
+                      mb: 4,
+                      pb: 4,
+                      borderBottom: index < contactInfo.length - 1 ? '1px solid' : 'none',
                       borderColor: 'divider',
-                      transition: 'all 0.3s ease',
-                      '&:hover': {
-                        borderColor: 'secondary.main',
-                        backgroundColor: 'rgba(201, 169, 97, 0.03)',
-                      },
                     }}
                   >
                     <Box
                       sx={{
-                        color: 'secondary.main',
-                        mb: 2,
                         display: 'flex',
-                        alignItems: 'center',
+                        alignItems: 'flex-start',
+                        gap: 2,
                       }}
                     >
-                      {info.icon}
-                    </Box>
-                    <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
-                      {info.title}
-                    </Typography>
-                    {info.content.map((line, idx) => (
-                      <Typography
-                        key={idx}
-                        variant="body2"
-                        sx={{ color: 'text.secondary', mb: 0.5 }}
+                      <Box
+                        sx={{
+                          color: 'secondary.main',
+                          mt: 0.5,
+                        }}
                       >
-                        {line}
-                      </Typography>
-                    ))}
-                  </Paper>
-                </Grid>
-              ))}
-            </Grid>
+                        {info.icon}
+                      </Box>
+                      <Box>
+                        <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 600 }}>
+                          {info.title}
+                        </Typography>
+                        {info.content.map((line, idx) => (
+                          <Typography
+                            key={idx}
+                            variant="body2"
+                            sx={{ color: 'text.secondary', mb: 0.5, lineHeight: 1.7 }}
+                          >
+                            {line}
+                          </Typography>
+                        ))}
+                      </Box>
+                    </Box>
+                  </Box>
+                ))}
+              </Box>
 
-            <Box sx={{ mt: 4 }}>
-              <Typography variant="h5" sx={{ mb: 3, fontWeight: 600 }}>
-                Our Location
-              </Typography>
-
-              <Box
-                sx={{
-                  width: "100%",
-                  height: 400,
-                  borderRadius: 2,
-                  overflow: "hidden",
-                  border: "1px solid",
-                  borderColor: "divider",
-                }}
-              >
-                <iframe
-                  title="Google Map Location"
-                  src="https://www.google.com/maps?q=2/206,+Tiruppur+Main+Road,+Gudimangalam,+Udumalpet,+Thiruppur+District+-+642201,+Tamil+Nadu,+India&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  allowFullScreen
-                ></iframe>
+              <Box>
+                <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
+                  Find Us on Map
+                </Typography>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: 300,
+                    borderRadius: 2,
+                    overflow: "hidden",
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                  }}
+                >
+                  <iframe
+                    title="Google Map Location"
+                    src="https://www.google.com/maps?q=2/206,+Tiruppur+Main+Road,+Gudimangalam,+Udumalpet,+Thiruppur+District+-+642201,+Tamil+Nadu,+India&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                  ></iframe>
+                </Box>
               </Box>
             </Box>
           </Grid>
         </Grid>
       </Section>
 
-      <Section backgroundColor="background.default" py={8}>
+      <Section
+        backgroundColor="background.default"
+        py={10}
+        sx={{
+          backgroundImage: 'linear-gradient(180deg, rgba(201, 169, 97, 0.02) 0%, rgba(201, 169, 97, 0.05) 100%)',
+        }}
+      >
         <Box sx={{ textAlign: 'center', maxWidth: 800, mx: 'auto' }}>
-          <Typography variant="h3" sx={{ mb: 3 }}>
-            Visit Our Facility
+          <Typography
+            variant="overline"
+            sx={{
+              color: 'secondary.main',
+              fontWeight: 600,
+              letterSpacing: 2,
+              mb: 2,
+              display: 'block'
+            }}
+          >
+            VISIT US
           </Typography>
-          <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
+          <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
+            Experience Our Facility
+          </Typography>
+          <Divider
+            sx={{
+              width: 60,
+              mx: 'auto',
+              mb: 4,
+              borderWidth: 2,
+              borderColor: 'secondary.main'
+            }}
+          />
+          <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8, color: 'text.secondary' }}>
             Experience our manufacturing capabilities firsthand. Schedule a visit to tour our
             facilities, meet our team, and see our production processes in action.
           </Typography>
-          <Typography variant="body1" sx={{ fontWeight: 600, color: 'secondary.main' }}>
-            Call us at +91 94420 09317 or use our booking form to schedule your visit.
-          </Typography>
+          <Box
+            sx={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 1,
+              px: 3,
+              py: 1.5,
+              borderRadius: 2,
+              backgroundColor: 'rgba(201, 169, 97, 0.1)',
+            }}
+          >
+            <PhoneIcon sx={{ color: 'secondary.main' }} />
+            <Typography variant="body1" sx={{ fontWeight: 600, color: 'secondary.main' }}>
+              +91 94420 09317
+            </Typography>
+          </Box>
         </Box>
       </Section>
     </>

@@ -92,19 +92,32 @@ function ContactForm() {
         <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
-            label="Name"
+            label="Full Name"
             name="name"
             value={formData.name}
             onChange={handleChange}
             error={!!errors.name}
             helperText={errors.name}
             required
+            variant="outlined"
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                backgroundColor: 'background.paper',
+                '&:hover fieldset': {
+                  borderColor: 'secondary.main',
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: 'secondary.main',
+                  borderWidth: 2,
+                },
+              },
+            }}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
-            label="Email"
+            label="Email Address"
             name="email"
             type="email"
             value={formData.email}
@@ -112,18 +125,44 @@ function ContactForm() {
             error={!!errors.email}
             helperText={errors.email}
             required
+            variant="outlined"
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                backgroundColor: 'background.paper',
+                '&:hover fieldset': {
+                  borderColor: 'secondary.main',
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: 'secondary.main',
+                  borderWidth: 2,
+                },
+              },
+            }}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
-            label="Phone"
+            label="Phone Number"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
             error={!!errors.phone}
             helperText={errors.phone}
             required
+            variant="outlined"
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                backgroundColor: 'background.paper',
+                '&:hover fieldset': {
+                  borderColor: 'secondary.main',
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: 'secondary.main',
+                  borderWidth: 2,
+                },
+              },
+            }}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -136,12 +175,25 @@ function ContactForm() {
             error={!!errors.subject}
             helperText={errors.subject}
             required
+            variant="outlined"
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                backgroundColor: 'background.paper',
+                '&:hover fieldset': {
+                  borderColor: 'secondary.main',
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: 'secondary.main',
+                  borderWidth: 2,
+                },
+              },
+            }}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label="Message"
+            label="Your Message"
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -150,12 +202,39 @@ function ContactForm() {
             required
             multiline
             rows={6}
+            variant="outlined"
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                backgroundColor: 'background.paper',
+                '&:hover fieldset': {
+                  borderColor: 'secondary.main',
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: 'secondary.main',
+                  borderWidth: 2,
+                },
+              },
+            }}
           />
         </Grid>
 
         {status.message && (
           <Grid item xs={12}>
-            <Alert severity={status.type}>{status.message}</Alert>
+            <Alert
+              severity={status.type}
+              sx={{
+                borderRadius: 2,
+                '&.MuiAlert-standardSuccess': {
+                  backgroundColor: 'rgba(201, 169, 97, 0.1)',
+                  color: 'text.primary',
+                  '& .MuiAlert-icon': {
+                    color: 'secondary.main',
+                  },
+                },
+              }}
+            >
+              {status.message}
+            </Alert>
           </Grid>
         )}
 
@@ -167,7 +246,20 @@ function ContactForm() {
             size="large"
             endIcon={loading ? <CircularProgress size={20} color="inherit" /> : <SendIcon />}
             disabled={loading}
-            sx={{ minWidth: 200 }}
+            sx={{
+              minWidth: 200,
+              py: 1.5,
+              px: 4,
+              fontSize: '1rem',
+              fontWeight: 600,
+              textTransform: 'none',
+              boxShadow: '0 4px 14px rgba(201, 169, 97, 0.3)',
+              '&:hover': {
+                boxShadow: '0 6px 20px rgba(201, 169, 97, 0.4)',
+                transform: 'translateY(-2px)',
+              },
+              transition: 'all 0.3s ease',
+            }}
           >
             {loading ? 'Sending...' : 'Send Message'}
           </Button>
