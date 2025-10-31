@@ -7,27 +7,27 @@ const preProductionSteps = [
   {
     title: 'Design',
     description: 'Creating the initial sketches and technical drawings for the garment.',
-    image: 'https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://techpacker.com/blog/content/images/2021/10/types-of-garment-samples-proto.jpeg',
   },
   {
     title: 'Pattern Making',
     description: 'Developing technical patterns used for cutting the fabric.',
-    image: 'https://images.pexels.com/photos/7148620/pexels-photo-7148620.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://audaces.com/wp-content/uploads/2023/08/pattern-making-paper.jpg',
   },
   {
     title: 'Sample Making',
     description: 'Producing a sample garment for buyer approval, which may involve adjustments to the design, fit, and construction.',
-    image: 'https://images.pexels.com/photos/3738388/pexels-photo-3738388.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://blog.waveplm.com/wp-content/uploads/2024/04/front-view-tailoring-studio-with-sewing-machine-garments.jpg',
   },
   {
     title: 'Grading',
     description: 'Scaling the pattern to create different sizes.',
-    image: 'https://images.pexels.com/photos/7148397/pexels-photo-7148397.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://fashinza.com/textile/wp-content/uploads/2022/10/safeimagekit-shutterstock_155648132-1024x683.jpg',
   },
   {
     title: 'Marker Making',
     description: 'Laying out the patterns on the fabric to minimize waste during cutting.',
-    image: 'https://images.pexels.com/photos/6765018/pexels-photo-6765018.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://i0.wp.com/textilelearner.net/wp-content/uploads/2015/10/maker-making.png?fit=564%2C346&ssl=1',
   },
 ];
 
@@ -35,17 +35,17 @@ const productionSteps = [
   {
     title: 'Spreading and Cutting',
     description: 'Laying multiple layers of fabric on a table and cutting them according to the marker, either manually or with machines.',
-    image: 'https://images.pexels.com/photos/3738386/pexels-photo-3738386.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://i0.wp.com/www.textileflowchart.com/wp-content/uploads/2015/01/Cutting-Section.png?fit=600%2C400&quality=100&ssl=1',
   },
   {
     title: 'Sorting and Bundling',
     description: 'Organizing the cut pieces into bundles for sewing operators.',
-    image: 'https://images.pexels.com/photos/6765046/pexels-photo-6765046.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://apparelresources.com/wp-content/uploads/2020/06/Production-Line.jpg',
   },
   {
     title: 'Sewing',
     description: 'Stitching the cut pieces together to form the garment.',
-    image: 'https://images.pexels.com/photos/3738369/pexels-photo-3738369.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://media.istockphoto.com/id/1224153292/photo/interior-of-garment-factory-tailoring-industry-fashion-designer-workshop-industry-concept.jpg?s=612x612&w=0&k=20&c=jIwTdrfFeXIfFIrwTiFqPe9jogM0UyPTTfVYbN_WHWM=',
   },
 ];
 
@@ -53,22 +53,22 @@ const postProductionSteps = [
   {
     title: 'Finishing',
     description: 'Adding final touches such as buttons, labels, and special washes. This stage may also include treatments like water-repellent or anti-static finishes.',
-    image: 'https://images.pexels.com/photos/3738384/pexels-photo-3738384.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjis4ZN4JMf3wPnWPV1kYcs6LUMbG8OQq1roOTN3GkWYMjgiAMvdbN88AO5E_X9yB8znsOfDhXG9GIhpukON-z1314HsWmXhF-EJdE7iUpOA7nP0NsvDu5GptxtkpnNQwEQfl9OVXhWugg/w1200-h675-p-k-no-nu/sewing+floor.jpg',
   },
   {
     title: 'Inspection',
     description: 'Conducting a final quality check to ensure the garment meets standards and matches the original design.',
-    image: 'https://images.pexels.com/photos/7148470/pexels-photo-7148470.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://i0.wp.com/fashion2apparel.com/wp-content/uploads/2022/04/final-inspection-in-garment-factory.jpg?fit=600%2C364&quality=100&ssl=1',
   },
   {
     title: 'Pressing',
     description: 'Ironing the garment for a polished, finished look.',
-    image: 'https://images.pexels.com/photos/3738087/pexels-photo-3738087.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://i0.wp.com/textileengineering.net/wp-content/uploads/2024/01/Hand-irons-in-garment-industry.jpg?resize=600%2C429&ssl=1',
   },
   {
     title: 'Packaging',
     description: 'Folding, tagging, and packing the garments for shipment.',
-    image: 'https://images.pexels.com/photos/7148445/pexels-photo-7148445.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://thumbs.dreamstime.com/b/workers-textile-factory-packaging-their-products-portrait-122161909.jpg',
   },
 ];
 
