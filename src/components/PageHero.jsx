@@ -34,7 +34,7 @@ function PageHero({ title, subtitle, image, breadcrumbs = [] }) {
           py: { xs: 6, md: 8 },
         }}
       >
-        {breadcrumbs.length > 0 && (
+        {/* {breadcrumbs.length > 0 && (
           <Breadcrumbs
             separator={<NavigateNextIcon fontSize="small" />}
             aria-label="breadcrumb"
@@ -93,7 +93,7 @@ function PageHero({ title, subtitle, image, breadcrumbs = [] }) {
               );
             })}
           </Breadcrumbs>
-        )}
+        )} */}
 
         <Typography
           variant="h1"

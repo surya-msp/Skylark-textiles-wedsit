@@ -169,7 +169,7 @@ function About() {
         </Grid>
       </Section>
 
-      <Section py={10}>
+      {/* <Section py={10}>
         <Typography variant="h2" sx={{ mb: 2, textAlign: 'center' }}>
           Certifications & Compliance
         </Typography>
@@ -177,7 +177,6 @@ function About() {
           variant="body1"
           sx={{ mb: 6, textAlign: 'center', maxWidth: 800, mx: 'auto', color: 'text.secondary' }}
         >
-          {/* TODO: Replace with actual certifications info from PDF */}
           Our commitment to quality and sustainability is validated by internationally recognized
           certifications and standards.
         </Typography>
@@ -209,7 +208,7 @@ function About() {
             </Grid>
           ))}
         </Grid>
-      </Section>
+      </Section> */}
     </>
   );
 }

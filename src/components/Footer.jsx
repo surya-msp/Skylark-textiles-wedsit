@@ -28,26 +28,31 @@ function Footer() {
       sx={{
         backgroundColor: 'primary.main',
         color: 'primary.contrastText',
-        pt: 5,
-        pb: 3,
+        pt: { xs: 4, md: 6 },
+        pb: { xs: 3, md: 4 },
         mt: 'auto',
       }}
     >
       <Container maxWidth="lg">
-        {/* TOP SECTION */}
-        <Grid container spacing={4} alignItems="flex-start">
-          {/* Left: Logo + Description */}
+        {/* === TOP SECTION === */}
+        <Grid
+          container
+          spacing={4}
+          alignItems="flex-start"
+          justifyContent="space-between"
+        >
+          {/* Left: Logo & Description */}
           <Grid item xs={12} md={7} lg={8}>
             <Box
               sx={{
                 display: 'flex',
-                alignItems: { xs: 'flex-start', sm: 'center' },
                 flexDirection: { xs: 'column', sm: 'row' },
+                alignItems: { xs: 'flex-start', sm: 'center' },
+                justifyContent: 'flex-start',
+                gap: { xs: 3, sm: 6, md: 10 },
                 flexWrap: 'wrap',
-                gap: 15,
               }}
             >
-              {/* Logo */}
               <Box
                 sx={{
                   display: 'flex',
@@ -59,29 +64,24 @@ function Footer() {
                 <img
                   src={footerLogo2}
                   alt="Skylark Textiles"
-                  style={{ width: '180px', height: 'auto' }}
+                  style={{ width: '160px', height: 'auto' }}
                 />
-                <Typography
-                  variant="body2"
-                  sx={{
-                    mt: 1.2,
-                    opacity: 0.8,
-                    fontSize: '0.75rem',
-                  }}
-                >
-                  © {new Date().getFullYear()} Skylark Textiles. All rights reserved.
-                </Typography>
               </Box>
 
-              {/* Description */}
-              <Box sx={{ flex: 1, minWidth: '250px', maxWidth: '350px' }}>
+              <Box
+                sx={{
+                  flex: 1,
+                  minWidth: { xs: '100%', sm: '250px' },
+                  maxWidth: '380px',
+                }}
+              >
                 <Typography
                   variant="body2"
                   sx={{
                     mb: 1.5,
                     lineHeight: 1.6,
                     opacity: 0.9,
-                    fontSize: '0.9rem',
+                    fontSize: { xs: '0.85rem', sm: '0.9rem' },
                   }}
                 >
                   A leading textile manufacturer committed to excellence in quality,
@@ -92,39 +92,51 @@ function Footer() {
             </Box>
           </Grid>
 
-          {/* Right: Contact */}
+          {/* Right: Contact Info */}
           <Grid item xs={12} md={5} lg={4}>
             <Typography
               variant="h6"
               sx={{
                 mb: 1.5,
                 fontWeight: 600,
-                fontSize: '1.1rem',
+                fontSize: { xs: '1rem', md: '1.1rem' },
                 letterSpacing: '0.05em',
               }}
             >
               Contact
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.2 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
               <Box sx={{ display: 'flex', gap: 1, alignItems: 'flex-start' }}>
                 <LocationOnIcon sx={{ fontSize: 18, mt: 0.2, opacity: 0.8 }} />
                 <Typography
                   variant="body2"
-                  sx={{ opacity: 0.9, lineHeight: 1.5, fontSize: '0.85rem' }}
+                  sx={{
+                    opacity: 0.9,
+                    lineHeight: 1.5,
+                    fontSize: { xs: '0.8rem', sm: '0.85rem' },
+                  }}
                 >
-                  2/206, Tiruppur Main Road, Gudimangalam, Udumalpet,<br />
-                  Thiruppur District - 642 201., Tamil Nadu, INDIA
+                  2/206, Tiruppur Main Road,<br />
+                  Gudimangalam Udumalpet,<br />
+                  Thiruppur District - 642 201.<br />
+                  Tamil Nadu, INDIA
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
                 <PhoneIcon sx={{ fontSize: 18, opacity: 0.8 }} />
-                <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.85rem' }}>
+                <Typography
+                  variant="body2"
+                  sx={{ opacity: 0.9, fontSize: { xs: '0.8rem', sm: '0.85rem' } }}
+                >
                   +91 94420 09317, +91 99438 49317
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
                 <EmailIcon sx={{ fontSize: 18, opacity: 0.8 }} />
-                <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.85rem' }}>
+                <Typography
+                  variant="body2"
+                  sx={{ opacity: 0.9, fontSize: { xs: '0.8rem', sm: '0.85rem' } }}
+                >
                   info@skylarktextiles.com
                 </Typography>
               </Box>
@@ -132,16 +144,16 @@ function Footer() {
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 3, borderColor: 'rgba(255, 255, 255, 0.15)' }} />
+        <Divider sx={{ my: 3, borderColor: 'rgba(255,255,255,0.15)' }} />
 
-        {/* BOTTOM SECTION */}
+        {/* === BOTTOM SECTION === */}
         <Box
           sx={{
             display: 'flex',
-            flexWrap: 'wrap',
+            flexDirection: { xs: 'column', sm: 'row' },
             justifyContent: 'center',
             alignItems: 'center',
-            gap: 2.5,
+            gap: { xs: 2, sm: 3 },
             textAlign: 'center',
           }}
         >
@@ -175,7 +187,8 @@ function Footer() {
               width: 4,
               height: 4,
               borderRadius: '50%',
-              backgroundColor: 'rgba(255, 255, 255, 0.4)',
+              backgroundColor: 'rgba(255,255,255,0.4)',
+              display: { xs: 'none', sm: 'block' },
             }}
           />
 
@@ -204,6 +217,19 @@ function Footer() {
               Terms of Service
             </Link>
           </Box>
+
+          {/* Copyright */}
+          <Typography
+            variant="body2"
+            sx={{
+              mt: { xs: 1, sm: 0 },
+              opacity: 0.8,
+              fontSize: '0.75rem',
+              textAlign: 'center',
+            }}
+          >
+            © {new Date().getFullYear()} Skylark Textiles. All rights reserved.
+          </Typography>
         </Box>
       </Container>
     </Box>
